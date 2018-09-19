@@ -31,7 +31,7 @@ if 'SUDO_USER' in os.environ:
 else:
     CONFIG_PATH = os.path.expanduser("~/.config/BTG")
 
-with open("README.rst", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
@@ -42,6 +42,7 @@ setuptools.setup(
     author_email="robin.marsollier@conix.fr",
     description="This tool allows you to qualify one or more potential malicious observables of various type (URL, MD5, SHA1, SHA256, SHA512, IPv4, IPv6, domain etc..)",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url="https://github.com/conix-security/BTG",
     keywords=["ioc"],
     license="GPLv3",
